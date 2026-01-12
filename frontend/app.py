@@ -9,7 +9,8 @@ import sys
 import os
 
 # Add project root to path for imports
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add project root to path for imports (Insert at 0 to shadow stdlib 'antigravity')
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from frontend.simulation_engine import AntigravityEngine
 from antigravity_data import PublicDataEngine, RealLiteratureEngine
