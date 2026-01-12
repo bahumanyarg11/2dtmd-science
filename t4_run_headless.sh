@@ -16,12 +16,12 @@ pip install -q -r requirements.txt
 # 50,000 epochs on T4 approx 20-30 mins
 echo "[2/3] Launching Scientific Training Job (Arrhenius Physics)..."
 echo "      > Logs: training.log"
-nohup python3 antigravity/core_ai/train_phase2.py --epochs 50000 > training.log 2>&1 &
+nohup python3 dtmd/core_ai/train_phase2.py --epochs 50000 > training.log 2>&1 &
 TRAIN_PID=$!
 echo "      > PID: $TRAIN_PID"
 
 # 3. Launch UI in Background (Headless Mode)
-echo "[3/3] Launching Antigravity Console (Scientific)..."
+echo "[3/3] Launching 2DTMD Console (Scientific)..."
 echo "      > UI Logs: ui.log"
 nohup xvfb-run -a python3 -m streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0 > ui.log 2>&1 &
 UI_PID=$!

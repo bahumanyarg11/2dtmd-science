@@ -33,10 +33,10 @@ echo "      Dependencies Verified."
 echo "[3/4] JIT-Compiling GFlowNet & FNO Kernels..."
 # This runs a dummy inference to trigger torch.compile() before UI loads
 # Fixed import path for current structure
-python3 -c "import sys; sys.path.append('.'); import torch; from antigravity.core_ai.fno_synthesis import SynthesisFNO; model = torch.compile(SynthesisFNO()); print('      Kernels Fused.')"
+python3 -c "import sys; sys.path.append('.'); import torch; from dtmd.core_ai.fno_synthesis import SynthesisFNO; model = torch.compile(SynthesisFNO()); print('      Kernels Fused.')"
 
 # 4. Launch Orchestrator
-echo "[4/4] Launching Antigravity Console..."
+echo "[4/4] Launching 2DTMD Console..."
 echo "      > UI accessible at: http://localhost:8501"
 echo "=================================================="
 

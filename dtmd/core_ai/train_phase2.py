@@ -10,14 +10,14 @@ import argparse
 # --- Scientific Imports ---
 # Add root directory to path to import the data engine
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-from antigravity_data import LiteratureSynthesisGenerator
+from dtmd_data import LiteratureSynthesisGenerator
 
 # --- H100 Optimization Flags ---
 torch.backends.cuda.matmul.allow_tf32 = True # Allow TF32 on Ampere/Hopper
 torch.backends.cudnn.allow_tf32 = True
 
 # --- FNO Architecture (Digital Twin) ---
-from antigravity.core_ai.fno_synthesis import SynthesisFNO
+from dtmd.core_ai.fno_synthesis import SynthesisFNO
 
 # --- Scientific Training Loop ---
 def train_scientific(epochs=50000):
@@ -30,7 +30,7 @@ def train_scientific(epochs=50000):
     else:
         device = torch.device('cpu')
     
-    print(f"--> Antigravity Science Engine Initializing on: {device}")
+    print(f"--> 2DTMD Science Engine Initializing on: {device}")
     
     # 1. Initialize The Scientific Data Generator (Arrhenius Physics)
     data_engine = LiteratureSynthesisGenerator()
@@ -77,7 +77,7 @@ def train_scientific(epochs=50000):
     # --- Save Checkpoint for Local Inference ---
     # Save to Project Root
     root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
-    params_path = os.path.join(root_path, "antigravity_brain.pt")
+    params_path = os.path.join(root_path, "dtmd_brain.pt")
     
     torch.save(twin.state_dict(), params_path)
     print(f"--> 🧠 Brain Saved: {params_path}")

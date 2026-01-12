@@ -2,10 +2,10 @@ import torch
 import numpy as np
 import pyvista as pv
 import os
-from antigravity.core_ai.fno_synthesis import SynthesisFNO
-from antigravity.core_ai.gflownet_agent import CrystalGFlowNet
+from dtmd.core_ai.fno_synthesis import SynthesisFNO
+from dtmd.core_ai.gflownet_agent import CrystalGFlowNet
 
-class AntigravityEngine:
+class DTMDEngine:
     """
     The Physics Engine that drives the UI.
     """
@@ -18,7 +18,7 @@ class AntigravityEngine:
         self.agent = CrystalGFlowNet().to(device)
         
         # --- Checkpoint Loader ---
-        ckpt_path = "antigravity_brain.pt"
+        ckpt_path = "dtmd_brain.pt"
         if os.path.exists(ckpt_path):
             try:
                 state = torch.load(ckpt_path, map_location=device)

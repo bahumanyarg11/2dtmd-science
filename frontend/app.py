@@ -9,15 +9,15 @@ import sys
 import os
 
 # Add project root to path for imports
-# Add project root to path for imports (Insert at 0 to shadow stdlib 'antigravity')
+# Add project root to path for imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from frontend.simulation_engine import AntigravityEngine
-from antigravity_data import PublicDataEngine, RealLiteratureEngine
+from frontend.simulation_engine import DTMDEngine
+from dtmd_data import PublicDataEngine, RealLiteratureEngine
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="ANTIGRAVITY | Researcher Console",
+    page_title="2DTMD | Researcher Console",
     layout="wide",
     initial_sidebar_state="expanded",
     page_icon="⚛️"
@@ -29,7 +29,7 @@ st.set_page_config(
 @st.cache_resource
 def load_engines():
     # Load Simulator
-    sim_engine = AntigravityEngine()
+    sim_engine = DTMDEngine()
     # Load Scientific Data
     data_engine = PublicDataEngine()
     real_engine = RealLiteratureEngine()

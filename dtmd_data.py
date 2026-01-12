@@ -1,5 +1,5 @@
 """
-Antigravity Scientific Data Engine
+2DTMD Scientific Data Engine
 ==================================
 
 This module implements the "Researcher Assistant" data layer.

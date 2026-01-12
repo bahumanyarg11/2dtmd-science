@@ -7,12 +7,12 @@ echo "   🍎 ANTIGRAVITY | MAC VISUALIZATION ENGINE     "
 echo "=================================================="
 
 # 1. Check for Brain
-if [ -f "antigravity_brain.pt" ]; then
+if [ -f "dtmd_brain.pt" ]; then
     echo "✅ Trained Brain Found! Loading Scientific Model..."
 else
-    echo "⚠️  No 'antigravity_brain.pt' found."
+    echo "⚠️  No 'dtmd_brain.pt' found."
     echo "   -> Running in SIMULATION MODE (Random Weights)"
-    echo "   -> To fix: Download 'antigravity_brain.pt' from Lightning AI to this folder."
+    echo "   -> To fix: Download 'dtmd_brain.pt' from Lightning AI to this folder."
 fi
 
 # 2. Install Dependencies (Mac optimized)

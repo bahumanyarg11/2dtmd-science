@@ -6,7 +6,7 @@ import sys
 # Ensure we can find the modules from parent directory if run directly or as package
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from antigravity.core_ai.fno_synthesis import SynthesisFNO
+from dtmd.core_ai.fno_synthesis import SynthesisFNO
 
 class AntigravityLearner:
     """
