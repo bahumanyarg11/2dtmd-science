@@ -1,0 +1,10 @@
+streamlit
+pandas>=2.0.0
+numpy>=1.24.0
+plotly
+pyvista
+stpyvista
+# CPU-only Torch for Cloud Deployment (Smaller Size)
+torch --index-url https://download.pytorch.org/whl/cpu
+# System helpers
+watchdog
