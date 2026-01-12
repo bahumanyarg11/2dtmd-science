@@ -1,7 +1,7 @@
 import streamlit as st
 import pyvista as pv
 pv.OFF_SCREEN = True
-from stpyvista import stpyvista
+# from stpyvista import stpyvista # REMOVED: Unstable on Cloud
 import numpy as np
 import pandas as pd
 import plotly.express as px
